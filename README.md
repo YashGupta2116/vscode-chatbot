@@ -28,7 +28,7 @@ VS Code AI Chat Assistant is a developer-focused extension that brings Gemini-po
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/vscode-chatbot.git
+   git clone https://github.com/YashGupta2116/vscode-chatbot.git
    cd vscode-chatbot
    ```
 
