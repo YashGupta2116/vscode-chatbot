@@ -1,178 +1,100 @@
-# vscode-chatbot README
+# VS Code AI Chat Assistant
 
-This is the README for your extension "vscode-chatbot". After writing up a brief description, we recommend including the following sections.
+VS Code AI Chat Assistant is a developer-focused extension that brings Gemini-powered AI directly into your Visual Studio Code workspace. It enables contextual conversations, in-editor file-aware prompts, and intelligent code generation, all from a sleek React-based interface.
+
+---
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **AI-Powered Code Generation**  
+  Interact with Gemini (Google's LLM) to generate code, answer technical questions, or provide explanations.
 
-For example if there is an image subfolder under your extension project workspace:
+- **Context-Aware File Integration**  
+  Use `@filename` to reference files in your workspace. The assistant reads and includes file content in the prompt automatically.
 
-\!\[feature X\]\(images/feature-x.png\)
+- **Autocomplete for Files**  
+  Start typing `@` to trigger intelligent file suggestions from the workspace.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- **Syntax-Highlighted Markdown Rendering**  
+  Responses are rendered with full markdown and language-specific syntax highlighting.
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-- `myExtension.enable`: Enable/disable this extension.
-- `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- **Modern In-Editor Chat Interface**  
+  Built with React and rendered inside a VS Code WebView for a seamless developer experience.
 
 ---
 
-## Following extension guidelines
+## Installation & Setup
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+1. **Clone the repository**
 
-- [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+   ```bash
+   git clone https://github.com/your-username/vscode-chatbot.git
+   cd vscode-chatbot
+   ```
 
-## Working with Markdown
+2. **Install root dependencies**
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+   ```bash
+   npm install
+   ```
 
-- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-- Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-- Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+3. **Build the frontend**
 
-## For more information
+   ```bash
+   cd chatbot-ui
+   npm install
+   npm run build
+   ```
 
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+4. **Add your Gemini API key**
 
-**Enjoy!**
+   Create a `.env` file at the root with the following:
 
-# 💬 VS Code AI Chat Assistant
+   ```bash
+   GEMINI_API_KEY=your-api-key-here
+   ```
 
-An AI-powered chat assistant integrated directly into Visual Studio Code. Designed for developers, this extension allows you to ask questions, generate code, and even reference files from your workspace using `@filename` mentions.
+5. **Run the extension**
 
-Built with React, Gemini API, and VS Code Extension API.
-
----
-
-## ✨ Features
-
-- 🧠 **AI-Powered Code Generation**
-
-  - Ask questions or request code snippets using natural language.
-  - Powered by Gemini (Google's LLM).
-
-- 📁 **File Context via `@filename`**
-
-  - Mention workspace files with `@filename`.
-  - Automatically injects the file's contents into your prompt for more accurate AI responses.
-
-- 🧠 **Smart Markdown Rendering**
-
-  - AI responses support markdown and syntax-highlighted code blocks.
-
-- 🔍 **Autocomplete for Files**
-
-  - Get intelligent suggestions when typing `@` for quick file references.
-
-- 💬 **Modern React UI**
-  - Chat interface built with React and rendered inside a VS Code WebView.
+   - Open the project in VS Code
+   - Press `F5` to launch the Extension Development Host
+   - Run the command: `Ask Chatbot`
 
 ---
 
-## 🚀 Getting Started
+## Demo
 
-### 1. Clone the repo and install dependencies
-
-```bash
-git clone https://github.com/your-username/vscode-chatbot.git
-cd vscode-chatbot
-npm install
-```
-
-### 2. Build the React UI
-
-```bash
-cd chatbot-ui
-npm install
-npm run build
-```
-
-### 3. Add your Gemini API Key
-
-Create a `.env` file in the root:
-
-```
-GEMINI_API_KEY=your-gemini-api-key-here
-```
-
-### 4. Launch the extension
-
-In VS Code, press `F5` to open a new Extension Development Host. Then run the command:
-
-```
-> Ask Chatbot
-```
+> (Include demo video or screenshots here)
 
 ---
 
-## 🖼️ Screenshots
+## Tech Stack
 
-> (Add demo screenshots or animations here)
-
----
-
-## 🧰 Tech Stack
-
-- **TypeScript** – Primary language
-- **React** – For rendering UI in WebView
-- **Vite** – Fast React build setup
-- **Gemini API** – AI text generation
-- **VS Code Extension API** – Integration into editor
+- TypeScript
+- React + Vite
+- Gemini API (via REST)
+- VS Code Extension API
+- WebView integration
 
 ---
 
-## 📌 TODO
+## Roadmap
 
-- [ ] Add image preview support for `@image.png`
-- [ ] Improve context summarization for large files
-- [ ] Chat history persistence
-
----
-
-## 🤝 Contributing
-
-PRs and suggestions welcome!
+- [ ] Image preview rendering for `@image.png`
+- [ ] File content summarization for large files
+- [ ] Persistent chat threads
+- [ ] Slash command support (`/explain`, `/reset`)
 
 ---
 
-## 📜 License
+## License
 
 MIT
 
 ---
 
-Built with ❤️ to simplify your coding workflow.
+## Author
+
+Developed by [Yash Gupta](https://github.com/YashGupta2116)
+
+---
